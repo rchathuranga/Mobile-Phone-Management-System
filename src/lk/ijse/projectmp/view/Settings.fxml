@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="843.0" prefWidth="1720.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.projectmp.controller.SettingsController">
+   <children>
+      <Label layoutX="60.0" layoutY="28.0" prefHeight="30.0" prefWidth="201.0" text="Account Settings">
+         <font>
+            <Font name="Arial Bold" size="17.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtName" focusColor="BLACK" layoutX="118.0" layoutY="69.0" prefHeight="31.0" prefWidth="262.0" promptText="Name" unFocusColor="#1900ff">
+         <font>
+            <Font size="15.0" />
+         </font></JFXTextField>
+      <JFXTextField fx:id="txtUsername" focusColor="BLACK" layoutX="118.0" layoutY="116.0" prefHeight="31.0" prefWidth="262.0" promptText="UserName" unFocusColor="#1900ff">
+         <font>
+            <Font size="15.0" />
+         </font></JFXTextField>
+      <JFXPasswordField fx:id="pfCurPassword" focusColor="BLACK" layoutX="429.0" layoutY="72.0" prefHeight="26.0" prefWidth="262.0" promptText="Current Password" unFocusColor="#1900ff" />
+      <JFXPasswordField fx:id="pfNewPassword" focusColor="BLACK" layoutX="429.0" layoutY="119.0" prefHeight="26.0" prefWidth="262.0" promptText="New Password" unFocusColor="#1900ff" />
+      <JFXButton fx:id="btnNew" layoutX="426.0" layoutY="192.0" onAction="#btnNewAccountAction" prefHeight="34.0" prefWidth="102.0" style="-fx-background-color: #28B463#28B463;" text="New" textFill="WHITE">
+         <font>
+            <Font name="Yu Gothic Bold" size="14.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btnChange" layoutX="548.0" layoutY="192.0" onAction="#btnChangePasswordAction" prefHeight="34.0" prefWidth="146.0" style="-fx-background-color: #2471A3 #2471A3;" text="Change Password" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="14.0" />
+         </font>
+      </JFXButton>
+      <Separator layoutX="110.0" layoutY="251.0" prefHeight="0.0" prefWidth="581.0" />
+      <Label layoutX="60.0" layoutY="278.0" prefHeight="30.0" prefWidth="244.0" text="Manage Brand And Catagory">
+         <font>
+            <Font name="Arial Bold" size="17.0" />
+         </font>
+      </Label>
+      <JFXRadioButton fx:id="rdbBrand" layoutX="114.0" layoutY="323.0" onAction="#rdbBrandCataAction" selected="true" text="Brand">
+         <toggleGroup>
+            <ToggleGroup fx:id="TGBrandorCata" />
+         </toggleGroup>
+      </JFXRadioButton>
+      <JFXRadioButton fx:id="rdbCatagory" layoutX="257.0" layoutY="324.0" onAction="#rdbBrandCataAction" text="Catagory" toggleGroup="$TGBrandorCata" />
+      <JFXTextField fx:id="txtBrandorCata" focusColor="BLACK" layoutX="98.0" layoutY="482.0" prefHeight="26.0" prefWidth="262.0" promptText="Brand" unFocusColor="#1900ff" />
+      <TextField fx:id="txtId" layoutX="147.0" layoutY="393.0" promptText="Id" />
+      <JFXButton fx:id="btnUpdate" layoutX="170.0" layoutY="561.0" onAction="#btnUpdateAction" prefHeight="34.0" prefWidth="102.0" style="-fx-background-color: #2471A3 #2471A3;" text="Update" textFill="WHITE">
+         <font>
+            <Font name="Ebrima Bold" size="17.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btnDelete" layoutX="296.0" layoutY="561.0" onAction="#btnDeleteAction" prefHeight="34.0" prefWidth="102.0" style="-fx-background-color: #EC7063;" text="Delete">
+         <font>
+            <Font name="Ebrima Bold" size="17.0" />
+         </font>
+      </JFXButton>
+      <TableView fx:id="tblBrandorCata" layoutX="471.0" layoutY="354.0" onMouseClicked="#tblBrandorCataMouseAction" prefHeight="455.0" prefWidth="311.0">
+        <columns>
+          <TableColumn prefWidth="92.79989624023438" text="Id" />
+          <TableColumn prefWidth="213.60003662109375" text="Name" />
+        </columns>
+      </TableView>
+      <Separator layoutX="849.0" layoutY="59.0" orientation="VERTICAL" prefHeight="749.0" prefWidth="0.0" />
+      <Label layoutX="890.0" layoutY="28.0" prefHeight="30.0" prefWidth="201.0" text="Add Seasonal Discount">
+         <font>
+            <Font name="Arial Bold" size="17.0" />
+         </font>
+      </Label>
+      <JFXRadioButton fx:id="rdbPercentage" layoutX="1120.0" layoutY="215.0" onAction="#rdbDicountAction" prefHeight="18.0" prefWidth="109.0" selected="true" text="Percentage">
+         <toggleGroup>
+            <ToggleGroup fx:id="discountType" />
+         </toggleGroup></JFXRadioButton>
+      <JFXRadioButton fx:id="rdbAmount" layoutX="971.0" layoutY="216.0" onAction="#rdbDicountAction" selected="true" text="Amount" toggleGroup="$discountType" />
+      <JFXTextField fx:id="txtDiscount" focusColor="BLACK" labelFloat="true" layoutX="971.0" layoutY="255.0" prefHeight="31.0" prefWidth="262.0" promptText="Amount" unFocusColor="#1900ff">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtNoofDays" focusColor="BLACK" labelFloat="true" layoutX="1327.0" layoutY="85.0" prefHeight="31.0" prefWidth="262.0" promptText="no of days" unFocusColor="#1900ff">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXTextField>
+      <JFXComboBox fx:id="cmbCatagory" focusColor="BLACK" labelFloat="true" layoutX="1327.0" layoutY="148.0" prefHeight="31.0" prefWidth="262.0" promptText="Catagory" unFocusColor="#1900ff" />
+      <JFXComboBox fx:id="cmbBrand" focusColor="BLACK" labelFloat="true" layoutX="1327.0" layoutY="209.0" prefHeight="31.0" prefWidth="262.0" promptText="Brand" unFocusColor="#1900ff">
+         <stylesheets>
+            <URL value="@../css/css.css" />
+            <URL value="@../css/css.css" />
+         </stylesheets></JFXComboBox>
+      <JFXButton fx:id="btnAddSeasonal" layoutX="1377.0" layoutY="274.0" onAction="#btnAddAction" prefHeight="34.0" prefWidth="102.0" style="-fx-background-color: #28B463#28B463;" text="Add" textFill="WHITE">
+         <font>
+            <Font name="Ebrima Bold" size="17.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btnReset" layoutX="1503.0" layoutY="274.0" onAction="#btnResetAction" prefHeight="34.0" prefWidth="102.0" style="-fx-background-color: #2471A3 #2471A3;" text="Reset" textFill="WHITE">
+         <font>
+            <Font name="Ebrima Bold" size="17.0" />
+         </font>
+      </JFXButton>
+      <TableView fx:id="tblSdiscount" layoutX="878.0" layoutY="354.0" onMouseClicked="#tblDiscountAction" prefHeight="455.0" prefWidth="820.0">
+         <columns>
+            <TableColumn prefWidth="72.7999267578125" text="ID" />
+            <TableColumn prefWidth="125.86663818359375" text="Start Date" />
+            <TableColumn prefWidth="152.5333251953125" text="End Date" />
+            <TableColumn prefWidth="134.4000244140625" text="Brand" />
+            <TableColumn prefWidth="132.2667236328125" text="Catagory" />
+            <TableColumn prefWidth="102.13330078125" text="Amount" />
+         </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+      <JFXDatePicker fx:id="dtpEndDate" defaultColor="#1900ff" layoutX="971.0" layoutY="150.0" prefHeight="28.0" prefWidth="262.0" promptText="End Date" />
+      <JFXDatePicker fx:id="dtpStartDate" defaultColor="#1500ff" layoutX="971.0" layoutY="93.0" prefHeight="28.0" prefWidth="262.0" promptText="Start Date" />
+   </children>
+</AnchorPane>

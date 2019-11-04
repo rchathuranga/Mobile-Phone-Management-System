@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="border" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="992.0" prefWidth="1920.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.projectmp.controller.MainController">
+   <left>
+      <VBox prefHeight="748.0" prefWidth="201.0" style="-fx-background-color: #2C3E50;" BorderPane.alignment="CENTER">
+         <children>
+            <JFXButton fx:id="btnHome" alignment="TOP_LEFT" layoutX="10.0" layoutY="293.0" onAction="#MenuBtnAction" prefHeight="66.0" prefWidth="241.0" style="-fx-background-color: #1E8449;" text="Home" textFill="WHITE">
+               <font>
+                  <Font name="Corbel Bold" size="22.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="10.0" top="45.0" />
+               </VBox.margin>
+               <graphic>
+                  <ImageView fitHeight="50.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/image/home.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="btnPos" alignment="TOP_LEFT" layoutX="10.0" layoutY="70.0" onAction="#MenuBtnAction" prefHeight="66.0" prefWidth="242.0" style="-fx-background-color: #1E8449;" text="POS" textFill="WHITE">
+               <font>
+                  <Font name="Corbel Bold" size="22.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="50.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/image/image%20(2).png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin>
+            </JFXButton>
+            <JFXButton fx:id="btnRepair" alignment="TOP_LEFT" layoutX="10.0" layoutY="156.0" onAction="#MenuBtnAction" prefHeight="66.0" prefWidth="247.0" style="-fx-background-color: #1E8449;" text="Repair" textFill="WHITE">
+               <font>
+                  <Font name="Corbel Bold" size="22.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="50.0" fitWidth="54.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/image/imagerepair%20(2).png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin>
+            </JFXButton>
+            <JFXButton fx:id="btnStock" alignment="TOP_LEFT" layoutX="10.0" layoutY="605.0" onAction="#MenuBtnAction" prefHeight="60.0" prefWidth="244.0" style="-fx-background-color: #1E8449;" text="Stock" textFill="WHITE">
+               <font>
+                  <Font name="Corbel Bold" size="22.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="48.0" fitWidth="44.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/image/Stock.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin>
+            </JFXButton>
+            <JFXButton fx:id="btnReturn" alignment="TOP_LEFT" layoutX="10.0" layoutY="659.0" onAction="#MenuBtnAction" prefHeight="66.0" prefWidth="260.0" style="-fx-background-color: #1E8449;" text="Returns" textFill="WHITE">
+               <font>
+                  <Font name="Corbel Bold" size="22.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="50.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/image/return.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin>
+            </JFXButton>
+            <JFXButton fx:id="btnCustomer" alignment="TOP_LEFT" layoutX="10.0" layoutY="356.0" onAction="#MenuBtnAction" prefHeight="66.0" prefWidth="260.0" style="-fx-background-color: #1E8449;" text="Customer" textFill="WHITE">
+               <font>
+                  <Font name="Corbel Bold" size="22.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="50.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/image/Customer.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin>
+            </JFXButton>
+            <JFXButton fx:id="btnReport" alignment="TOP_LEFT" layoutX="10.0" layoutY="605.0" onAction="#MenuBtnAction" prefHeight="66.0" prefWidth="257.0" style="-fx-background-color: #1E8449;" text="Report" textFill="WHITE">
+               <font>
+                  <Font name="Corbel Bold" size="22.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="50.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/image/Report.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin>
+            </JFXButton>
+            <JFXButton fx:id="btnSettings" alignment="TOP_LEFT" layoutX="10.0" layoutY="668.0" onAction="#MenuBtnAction" prefHeight="66.0" prefWidth="249.0" style="-fx-background-color: #1E8449;" text="Settings" textFill="WHITE">
+               <font>
+                  <Font name="Corbel Bold" size="22.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="50.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/image/Setting.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <VBox.margin>
+                  <Insets bottom="20.0" />
+               </VBox.margin>
+            </JFXButton>
+            <ImageView fx:id="image" fitHeight="121.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/image/1200px-Circle_Logo.svg.png" />
+               </image>
+               <VBox.margin>
+                  <Insets left="40.0" />
+               </VBox.margin>
+            </ImageView>
+         </children>
+      </VBox>
+   </left>
+   <top>
+      <VBox prefHeight="116.0" prefWidth="1280.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox prefHeight="75.0" prefWidth="1280.0" style="-fx-background-color: #2C3E50;">
+               <children>
+                  <Region prefHeight="70.0" prefWidth="22.0" />
+                  <ImageView fitHeight="70.0" fitWidth="137.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/image/5842905ca6515b1e0ad75ab9.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="49.0" fitWidth="389.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/image/image%20(1).png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets top="10.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <Region prefHeight="70.0" prefWidth="154.0" HBox.hgrow="ALWAYS" />
+                  <Label fx:id="lblUIname" alignment="CENTER" prefHeight="70.0" prefWidth="409.0" text="Home" textFill="#00ff66">
+                     <font>
+                        <Font name="ROGFonts-Regular" size="36.0" />
+                     </font>
+                  </Label>
+                  <Region prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS" />
+                  <Label prefHeight="70.0" prefWidth="206.0" text="Welcome" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="Agency FB Bold" size="37.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblUser" layoutX="848.0" layoutY="10.0" prefHeight="70.0" prefWidth="231.0" text="User" textFill="WHITE">
+                     <font>
+                        <Font name="Agency FB Bold" size="37.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Region prefHeight="70.0" prefWidth="53.0" />
+               </children></HBox>
+            <HBox prefHeight="52.0" prefWidth="1280.0" style="-fx-background-color: #1E8449;">
+               <children>
+                  <Label text="Date:" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Bold" size="18.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="30.0" top="10.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label fx:id="lblDate" alignment="CENTER_RIGHT" prefHeight="22.0" prefWidth="102.0" text="01/06/2019" textFill="WHITE">
+                     <HBox.margin>
+                        <Insets left="10.0" top="10.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="Arial Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="40.0" layoutY="25.0" text="Time :" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Bold" size="18.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="35.0" top="10.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label fx:id="lblTime" alignment="CENTER_RIGHT" layoutX="193.0" layoutY="10.0" prefHeight="22.0" prefWidth="122.0" text="7.38 AM" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Bold" size="18.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="10.0" top="10.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Region prefHeight="52.0" prefWidth="106.0" HBox.hgrow="ALWAYS" />
+                  <JFXTextField fx:id="txtUsername" prefHeight="26.0" prefWidth="171.0" promptText="Username" style="-fx-background-color: white;">
+                     <HBox.margin>
+                        <Insets top="10.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="Corbel Bold" size="13.0" />
+                     </font>
+                     <padding>
+                        <Insets left="5.0" />
+                     </padding>
+                  </JFXTextField>
+                  <JFXPasswordField fx:id="pfpassword" maxWidth="1.7976931348623157E308" prefHeight="26.0" prefWidth="171.0" promptText="password" style="-fx-background-color: white;">
+                     <HBox.margin>
+                        <Insets left="20.0" top="10.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="Corbel Bold" size="13.0" />
+                     </font>
+                     <padding>
+                        <Insets left="5.0" />
+                     </padding>
+                  </JFXPasswordField>
+                  <Region prefHeight="46.0" prefWidth="46.0" />
+                  <JFXButton fx:id="btnSwitchUser" onAction="#btnSwitchUserAction" prefHeight="31.0" prefWidth="97.0" style="-fx-background-color: #2C3E50; -fx-background-radius: 45;" text="SwitchUser" textFill="WHITE">
+                     <font>
+                        <Font name="Corbel Bold" size="14.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets top="7.0" />
+                     </HBox.margin>
+                  </JFXButton>
+                  <Region layoutX="817.0" layoutY="10.0" prefHeight="46.0" prefWidth="47.0" />
+                  <JFXButton fx:id="btnLogout" layoutX="903.0" layoutY="17.0" onAction="#btnLogoutAction" prefHeight="31.0" prefWidth="76.0" style="-fx-background-color: #2C3E50; -fx-background-radius: 45;" text="Logout" textFill="WHITE">
+                     <font>
+                        <Font name="Corbel Bold" size="14.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets right="20.0" top="7.0" />
+                     </HBox.margin>
+                  </JFXButton>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </top>
+   <center>
+      <AnchorPane fx:id="anchor" prefHeight="200.0" prefWidth="1078.0" BorderPane.alignment="CENTER" />
+   </center>
+   <bottom>
+      <AnchorPane prefHeight="21.0" prefWidth="1920.0" style="-fx-background-color: GRAY;" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="42.0" layoutY="-1.0" maxHeight="1.7976931348623157E308" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="1862.0" snapToPixel="false" text="COPYRIGHT RESERVED ©    TRADEMARK ™ OF PANDORA  ALL RIGHT RESERVED  REGISTRERED COMPANY IJSE ®     CONTACT FOR MORE DETAILS 0770180886   RAVINDU CHATHURANGA     VERY SEPECIAL THANKS FOR WISHWA KALANSOORIYA" textFill="WHITE">
+               <font>
+                  <Font name="Arial" size="15.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </bottom>
+</BorderPane>

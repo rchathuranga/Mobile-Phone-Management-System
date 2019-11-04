@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="anchor" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="869.0" prefWidth="1720.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.projectmp.controller.AddRepairController">
+   <children>
+      <AnchorPane layoutX="-1.0" layoutY="7.0" prefHeight="46.0" prefWidth="1720.0" style="-fx-background-color: #2471A3;">
+         <children>
+            <JFXTextField fx:id="txtSearch" layoutX="1204.0" layoutY="8.0" onAction="#txtSearchAction" prefHeight="26.0" prefWidth="498.0" style="-fx-background-color: white;" />
+            <Label layoutX="805.0" layoutY="7.0" text="Search Repair Services by ID or Name" textFill="WHITE">
+               <font>
+                  <Font name="Yu Gothic Regular" size="21.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <Label layoutX="34.0" layoutY="66.0" prefHeight="26.0" prefWidth="147.0" text="Customer Details">
+         <font>
+            <Font name="Arial Bold" size="17.0" />
+         </font>
+      </Label>
+      <JFXComboBox fx:id="cbxSelectCustomer" focusColor="BLACK" layoutX="82.0" layoutY="113.0" prefHeight="31.0" prefWidth="262.0" promptText="Select Customer" styleClass="cbx15" stylesheets="@../css/css.css" unFocusColor="#1900ff" />
+      <ImageView fx:id="imgClear" fitHeight="38.0" fitWidth="42.0" layoutX="351.0" layoutY="108.0" onMouseClicked="#imgClearMouseAction" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/image/clear-icon-0.png" />
+         </image>
+      </ImageView>
+      <JFXTextField fx:id="txtCname" focusColor="BLACK" labelFloat="true" layoutX="83.0" layoutY="166.0" prefHeight="31.0" prefWidth="262.0" promptText="Name" unFocusColor="#1900ff">
+         <font>
+            <Font size="15.0" />
+         </font></JFXTextField>
+      <JFXTextField fx:id="txtCcontact" focusColor="BLACK" labelFloat="true" layoutX="82.0" layoutY="224.0" onAction="#txtContactAction" prefHeight="31.0" prefWidth="262.0" promptText="Contact" unFocusColor="#1900ff">
+         <font>
+            <Font size="15.0" />
+         </font></JFXTextField>
+      <JFXTextField fx:id="txtCnic" focusColor="BLACK" labelFloat="true" layoutX="81.0" layoutY="281.0" prefHeight="31.0" prefWidth="262.0" promptText="NIC" unFocusColor="#1900ff">
+         <font>
+            <Font size="15.0" />
+         </font></JFXTextField>
+      <JFXButton fx:id="btnSaveDraft" layoutX="81.0" layoutY="326.0" onAction="#btnSaveDraftAction" prefHeight="34.0" prefWidth="102.0" style="-fx-background-color: #2471A3;" text="Save Draft" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="14.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btnFillDraft" layoutX="242.0" layoutY="326.0" onAction="#btnFillDraftAction" prefHeight="34.0" prefWidth="102.0" style="-fx-background-color: #2471A3;" text="Fill Draft" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="14.0" />
+         </font>
+      </JFXButton>
+      <Separator layoutX="438.0" layoutY="78.0" orientation="VERTICAL" prefHeight="263.0" prefWidth="5.0" />
+      <Separator layoutX="29.0" layoutY="388.0" prefHeight="1.0" prefWidth="378.0" />
+      <Label layoutX="476.0" layoutY="69.0" prefHeight="26.0" prefWidth="124.0" text="Repair Details">
+         <font>
+            <Font name="Arial Bold" size="17.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtServiceId" layoutX="528.0" layoutY="115.0" prefHeight="26.0" prefWidth="124.0" promptText="Id" />
+      <JFXComboBox fx:id="cbxService" focusColor="BLACK" layoutX="528.0" layoutY="174.0" onAction="#cbxServiceAction" prefHeight="31.0" prefWidth="262.0" promptText="Service" styleClass="cbx15" stylesheets="@../css/css.css" unFocusColor="#1900ff" />
+      <JFXButton fx:id="btnRemoveService" layoutX="528.0" layoutY="238.0" onAction="#btnRemoveServiceAction" prefHeight="34.0" prefWidth="102.0" style="-fx-background-color: #EC7063;" text="Remove">
+         <font>
+            <Font name="Arial" size="14.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btnAddService" layoutX="687.0" layoutY="241.0" onAction="#btnAddServiceAction" prefHeight="34.0" prefWidth="102.0" style="-fx-background-color: #2471A3;" text="Add Service" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="14.0" />
+         </font>
+      </JFXButton>
+      <Label layoutX="53.0" layoutY="422.0" prefHeight="26.0" prefWidth="128.0" text="Phone Details">
+         <font>
+            <Font name="Arial Bold" size="17.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtPhone" focusColor="BLACK" labelFloat="true" layoutX="93.0" layoutY="475.0" prefHeight="31.0" prefWidth="262.0" promptText="Phone" unFocusColor="#1900ff">
+         <font>
+            <Font size="15.0" />
+         </font></JFXTextField>
+      <JFXTextField fx:id="txtDescription" focusColor="BLACK" labelFloat="true" layoutX="92.0" layoutY="538.0" prefHeight="31.0" prefWidth="262.0" promptText="Description" unFocusColor="#1900ff">
+         <font>
+            <Font size="15.0" />
+         </font></JFXTextField>
+      <Separator layoutX="29.0" layoutY="599.0" prefHeight="1.0" prefWidth="378.0" />
+      <Label layoutX="47.0" layoutY="629.0" text="No.of Services :">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblNoofServices" alignment="CENTER_RIGHT" layoutX="204.0" layoutY="630.0" prefHeight="26.0" prefWidth="74.0" text="00" textFill="#1500ff">
+         <font>
+            <Font name="Consolas Bold" size="18.0" />
+         </font>
+      </Label>
+      <Separator layoutX="35.0" layoutY="715.0" prefHeight="1.0" prefWidth="378.0" />
+      <Separator layoutX="841.0" layoutY="76.0" orientation="VERTICAL" prefHeight="263.0" prefWidth="0.0" />
+      <TableView fx:id="tblRepairServiceList" layoutX="445.0" layoutY="390.0" prefHeight="398.0" prefWidth="1266.0">
+         <columns>
+            <TableColumn prefWidth="93.86663818359375" text="Service Id" />
+            <TableColumn prefWidth="388.26666259765625" text="Description" />
+            <TableColumn prefWidth="162.13330078125" text="Service Price" />
+            <TableColumn prefWidth="221.60003662109375" text="Part Name" />
+            <TableColumn prefWidth="179.199951171875" text="Part Price" />
+            <TableColumn prefWidth="207.199951171875" text="Total" />
+         </columns>
+      </TableView>
+      <AnchorPane fx:id="achNewService" disable="true" layoutX="877.0" layoutY="51.0" prefHeight="330.0" prefWidth="818.0">
+         <children>
+            <Label fx:id="lblNewService" layoutX="14.0" layoutY="14.0" prefHeight="26.0" prefWidth="102.0" text="New Service">
+               <font>
+                  <Font name="Arial Bold" size="17.0" />
+               </font>
+            </Label>
+            <JFXComboBox fx:id="cbxNewService" focusColor="BLACK" labelFloat="true" layoutX="48.0" layoutY="59.0" prefHeight="31.0" prefWidth="262.0" promptText="Select Sevice" styleClass="cbx15" stylesheets="@../css/css.css" unFocusColor="#1900ff" />
+            <JFXTextField fx:id="txtServiceName" focusColor="BLACK" labelFloat="true" layoutX="48.0" layoutY="119.0" prefHeight="31.0" prefWidth="262.0" promptText="Service Name" unFocusColor="#1900ff">
+               <font>
+                  <Font size="15.0" />
+               </font></JFXTextField>
+            <JFXTextField fx:id="txtServicePrice" focusColor="BLACK" labelFloat="true" layoutX="48.0" layoutY="188.0" prefHeight="31.0" prefWidth="262.0" promptText="Service Price" unFocusColor="#1900ff">
+               <font>
+                  <Font size="15.0" />
+               </font></JFXTextField>
+            <JFXComboBox fx:id="cbxPartName" focusColor="BLACK" labelFloat="true" layoutX="48.0" layoutY="255.0" prefHeight="31.0" prefWidth="262.0" promptText="Part Name" styleClass="cbx15" stylesheets="@../css/css.css" unFocusColor="#1900ff" />
+            <JFXTextField fx:id="txtPartName" focusColor="BLACK" labelFloat="true" layoutX="372.0" layoutY="63.0" prefHeight="31.0" prefWidth="262.0" promptText="Part Name" unFocusColor="#1900ff">
+               <font>
+                  <Font size="15.0" />
+               </font></JFXTextField>
+            <JFXTextField fx:id="txtQty" focusColor="BLACK" labelFloat="true" layoutX="557.0" layoutY="125.0" prefHeight="31.0" prefWidth="73.0" promptText="Qty" unFocusColor="#1900ff">
+               <font>
+                  <Font size="15.0" />
+               </font></JFXTextField>
+            <JFXTextField fx:id="txtBuyingPrice" focusColor="BLACK" labelFloat="true" layoutX="372.0" layoutY="188.0" prefHeight="31.0" prefWidth="262.0" promptText="Buying Price" unFocusColor="#1900ff">
+               <font>
+                  <Font size="15.0" />
+               </font></JFXTextField>
+            <JFXTextField fx:id="txtSellingPrice" focusColor="BLACK" labelFloat="true" layoutX="372.0" layoutY="253.0" prefHeight="31.0" prefWidth="262.0" promptText="Selling Price" unFocusColor="#1900ff">
+               <font>
+                  <Font size="15.0" />
+               </font></JFXTextField>
+            <JFXButton fx:id="btnAdd" layoutX="671.0" layoutY="69.0" onAction="#btnAddAction" prefHeight="34.0" prefWidth="102.0" style="-fx-background-color: #2471A3;" text="Add" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="btnUpdateService" layoutX="671.0" layoutY="131.0" onAction="#btnUpdateAction" prefHeight="34.0" prefWidth="102.0" style="-fx-background-color: #2471A3;" text="Update" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="btnDeleteService" layoutX="671.0" layoutY="194.0" onAction="#btnDeleteAction" prefHeight="34.0" prefWidth="102.0" style="-fx-background-color: #EC7063;" text="Delete">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="btnCancelService" layoutX="671.0" layoutY="256.0" onAction="#btnCancelServiceAction" prefHeight="34.0" prefWidth="102.0" style="-fx-background-color: #2471A3;" text="Cancel" textFill="WHITE">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+      <HBox layoutY="798.0" prefHeight="60.0" prefWidth="1720.0">
+         <children>
+            <JFXButton fx:id="btnViewRepair" layoutX="1464.0" layoutY="20.0" onAction="#btnViewRepairAction" prefHeight="45.0" prefWidth="190.0" style="-fx-background-color: #2471A3;" text="View Repairs" textFill="WHITE">
+               <font>
+                  <Font name="Ebrima Bold" size="17.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="50.0" top="10.0" />
+               </HBox.margin>
+            </JFXButton>
+            <JFXButton fx:id="btnAddNewService" layoutX="20.0" layoutY="20.0" onAction="#btnAddNewServiceAction" prefHeight="45.0" prefWidth="190.0" style="-fx-background-color: #2471A3;" text="Add New Service" textFill="WHITE">
+               <font>
+                  <Font name="Ebrima Bold" size="17.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="20.0" top="10.0" />
+               </HBox.margin>
+            </JFXButton>
+            <Region prefHeight="60.0" prefWidth="32.0" HBox.hgrow="ALWAYS" />
+            <AnchorPane prefHeight="60.0" prefWidth="963.0">
+               <children>
+                  <Label layoutX="41.0" layoutY="15.0" text="Service Total : ">
+                     <font>
+                        <Font name="Candara" size="21.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblServiceTotal" alignment="CENTER_RIGHT" layoutX="172.0" layoutY="14.0" prefHeight="26.0" prefWidth="133.0" text="0.0">
+                     <font>
+                        <Font name="Candara" size="22.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="658.0" layoutY="11.0" text="Total : ">
+                     <font>
+                        <Font name="Candara Bold" size="27.0" />
+                     </font>
+                  </Label>
+                  <Line endX="106.60000610351562" layoutX="201.0" layoutY="45.0" startX="-30.000030517578125" />
+                  <Line endX="118.79998779296875" layoutX="792.0" layoutY="42.0" startX="-45.7999267578125" />
+                  <Line endX="119.79998779296875" layoutX="791.0" layoutY="44.0" startX="-44.5333251953125" strokeMiterLimit="0.0" />
+                  <Label fx:id="lblTotal" alignment="CENTER_RIGHT" layoutX="745.0" layoutY="7.0" prefHeight="38.0" prefWidth="163.0" text="0.0">
+                     <font>
+                        <Font name="Candara Bold" size="31.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="328.0" layoutY="15.0" text="Part Total :">
+                     <font>
+                        <Font name="Candara" size="21.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblPartTotal" alignment="CENTER_RIGHT" layoutX="428.0" layoutY="15.0" prefHeight="26.0" prefWidth="136.0" text="0.0">
+                     <font>
+                        <Font name="Candara" size="22.0" />
+                     </font>
+                  </Label>
+                  <Line endX="124.4000244140625" layoutX="441.0" layoutY="45.0" startX="-11.800018310546875" />
+               </children>
+               <HBox.margin>
+                  <Insets right="30.0" />
+               </HBox.margin>
+            </AnchorPane>
+            <JFXButton fx:id="btnAddRepair" layoutX="10.0" layoutY="10.0" onAction="#btnAddRepairAction" prefHeight="45.0" prefWidth="190.0" style="-fx-background-color: #28B463#28B463;" text="Add Repair" textFill="WHITE">
+               <font>
+                  <Font name="Yu Gothic Bold" size="24.0" />
+               </font>
+               <HBox.margin>
+                  <Insets right="20.0" top="10.0" />
+               </HBox.margin>
+            </JFXButton>
+            <JFXButton fx:id="btnDelete" layoutX="273.0" layoutY="10.0" onAction="#btnDiscardAction" prefHeight="45.0" prefWidth="190.0" style="-fx-background-color: #EC7063;" text="Discard">
+               <font>
+                  <Font name="Yu Gothic Bold" size="24.0" />
+               </font>
+               <HBox.margin>
+                  <Insets right="10.0" top="10.0" />
+               </HBox.margin>
+            </JFXButton>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

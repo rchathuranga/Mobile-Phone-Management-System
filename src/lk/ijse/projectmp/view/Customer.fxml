@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="850.0" prefWidth="1722.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.projectmp.controller.CustomerController">
+   <children>
+      <AnchorPane layoutY="1.0" prefHeight="46.0" prefWidth="1720.0" style="-fx-background-color: #2471A3;">
+         <children>
+            <JFXTextField fx:id="txtSearch" layoutX="1204.0" layoutY="9.0" onAction="#txtSearchAction" prefHeight="26.0" prefWidth="498.0" style="-fx-background-color: white;" />
+            <Label layoutX="897.0" layoutY="10.0" text="Search by id,name Customer" textFill="WHITE">
+               <font>
+                  <Font name="Yu Gothic Regular" size="21.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <TextField fx:id="txtCid" editable="false" layoutX="22.0" layoutY="101.0" prefHeight="26.0" prefWidth="116.0" promptText="Id" />
+      <JFXTextField fx:id="txtName" focusColor="BLACK" layoutX="206.0" layoutY="95.0" onAction="#txtNameAction" prefHeight="32.0" prefWidth="272.0" promptText="Name" unFocusColor="#1900ff" />
+      <JFXTextField fx:id="txtContact" focusColor="BLACK" layoutX="544.0" layoutY="95.0" onAction="#txtContactAction" prefHeight="32.0" prefWidth="272.0" promptText="Contact no" unFocusColor="#1900ff" />
+      <JFXTextField fx:id="txtNic" focusColor="BLACK" layoutX="896.0" layoutY="98.0" onAction="#txtNicAction" prefHeight="32.0" prefWidth="272.0" promptText="NIC" unFocusColor="#1900ff" />
+      <JFXButton fx:id="btnAdd" layoutX="932.0" layoutY="145.0" onAction="#btnAddAction" prefHeight="34.0" prefWidth="94.0" style="-fx-background-color: #2471A3;" text="Add" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="14.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btnUpdate" layoutX="1048.0" layoutY="145.0" onAction="#btnUpdateAction" prefHeight="34.0" prefWidth="94.0" style="-fx-background-color: #2471A3;" text="Update" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="14.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btnDelete" layoutX="1163.0" layoutY="145.0" onAction="#btnDelete" prefHeight="34.0" prefWidth="94.0" style="-fx-background-color: #EC7063;" text="Delete" textFill="WHITE">
+         <font>
+            <Font name="Arial" size="14.0" />
+         </font>
+      </JFXButton>
+      <TableView fx:id="tblODetails" layoutX="881.0" layoutY="235.0" onMouseClicked="#tblDetailsAction" prefHeight="272.0" prefWidth="428.0" style="-fx-border-color: #1900ff;">
+        <columns>
+            <TableColumn prefWidth="75.0" text="Date" />
+          <TableColumn prefWidth="75.0" text="Id" />
+            <TableColumn prefWidth="75.0" text="Order Id" />
+            <TableColumn prefWidth="75.0" text="Amount" />
+        </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+      <TableView fx:id="tblCustomer" layoutX="71.0" layoutY="235.0" onMouseClicked="#tbtCustomerAction" prefHeight="598.0" prefWidth="738.0" style="-fx-border-color: #1900ff;">
+        <columns>
+          <TableColumn prefWidth="75.0" text="Id" />
+          <TableColumn prefWidth="75.0" text="Name" />
+            <TableColumn prefWidth="20.0" text="Contact" />
+            <TableColumn prefWidth="347.99993896484375" text="NIC" />
+        </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+      <Separator layoutX="1357.0" layoutY="93.0" orientation="VERTICAL" prefHeight="747.0" prefWidth="0.0" />
+      <Label fx:id="lblTotCustomer" alignment="CENTER" layoutX="1496.0" layoutY="122.0" prefHeight="98.0" prefWidth="116.0" text="--" textFill="#1900ff">
+         <font>
+            <Font name="Consolas Bold" size="53.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="1484.0" layoutY="228.0" prefHeight="34.0" prefWidth="139.0" text="Customers">
+         <font>
+            <Font name="Arial Bold" size="22.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblOrderCustomer" alignment="CENTER" layoutX="1496.0" layoutY="302.0" prefHeight="98.0" prefWidth="116.0" text="--" textFill="#1900ff">
+         <font>
+            <Font name="Consolas Bold" size="53.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="1429.0" layoutY="409.0" prefHeight="34.0" prefWidth="249.0" text="Customers Interact">
+         <font>
+            <Font name="Arial Bold" size="22.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="1379.0" layoutY="581.0" prefHeight="34.0" prefWidth="249.0">
+         <font>
+            <Font name="Arial Bold" size="22.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblAddCustomer" alignment="CENTER" layoutX="1496.0" layoutY="502.0" prefHeight="98.0" prefWidth="116.0" text="--" textFill="#1900ff">
+         <font>
+            <Font name="Consolas Bold" size="53.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="1429.0" layoutY="609.0" prefHeight="34.0" prefWidth="249.0" text="Customers Add Today">
+         <font>
+            <Font name="Arial Bold" size="22.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="1431.0" layoutY="438.0" prefHeight="34.0" prefWidth="249.0" text="Today">
+         <font>
+            <Font name="Arial Bold" size="22.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="btnReset" layoutX="666.0" layoutY="144.0" onAction="#btnResetAction" prefHeight="34.0" prefWidth="94.0" style="-fx-background-color: #2471A3;" text="Reset" textFill="WHITE">
+         <font>
+            <Font name="Corbel" size="16.0" />
+         </font>
+      </JFXButton>
+      <TableView fx:id="tblRDetails" layoutX="881.0" layoutY="545.0" onMouseClicked="#tblDetailsAction" prefHeight="283.0" prefWidth="428.0" style="-fx-border-color: #1900ff;">
+         <columns>
+            <TableColumn prefWidth="75.0" text="Date" />
+            <TableColumn prefWidth="75.0" text="Id" />
+            <TableColumn prefWidth="75.0" text="Repair Id" />
+            <TableColumn prefWidth="75.0" text="Amount" />
+         </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+   </children>
+</AnchorPane>

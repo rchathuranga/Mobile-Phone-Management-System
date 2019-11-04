@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="858.0" prefWidth="1720.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.projectmp.controller.AddStockController">
+   <children>
+      <TableView fx:id="tblStockList" layoutX="277.0" layoutY="284.0" onMouseClicked="#tblStockMouseAction" prefHeight="486.0" prefWidth="1430.0">
+        <columns>
+          <TableColumn prefWidth="75.0" text="Id" />
+          <TableColumn prefWidth="365.3333435058594" text="Name" />
+            <TableColumn minWidth="0.0" prefWidth="149.60009765625" text="Brand" />
+            <TableColumn prefWidth="145.5999755859375" text="Catagory" />
+            <TableColumn prefWidth="89.86669921875" text="Ram" />
+            <TableColumn prefWidth="101.066650390625" text="Storage" />
+            <TableColumn prefWidth="85.8665771484375" text="Network" />
+            <TableColumn prefWidth="95.466796875" text="Warranty" />
+            <TableColumn prefWidth="80.533447265625" text="Qty" />
+            <TableColumn prefWidth="126.93316650390625" text="Buying Price" />
+            <TableColumn prefWidth="122.13330078125" text="Selling Price" />
+        </columns>
+      </TableView>
+      <JFXTextField fx:id="txtName" focusColor="BLACK" labelFloat="true" layoutX="164.0" layoutY="81.0" prefHeight="31.0" prefWidth="262.0" promptText="Phone Name" unFocusColor="#0008ff">
+         <font>
+            <Font size="15.0" />
+         </font></JFXTextField>
+      <JFXComboBox fx:id="cbxBrand" focusColor="BLACK" labelFloat="true" layoutX="165.0" layoutY="142.0" prefHeight="31.0" prefWidth="262.0" promptText="Brand" unFocusColor="#0008ff" />
+      <JFXComboBox fx:id="cbxCatagory" disable="true" focusColor="BLACK" labelFloat="true" layoutX="165.0" layoutY="214.0" prefHeight="31.0" prefWidth="262.0" promptText="Catagory" unFocusColor="#0008ff" />
+      <JFXTextField fx:id="txtRam" focusColor="BLACK" labelFloat="true" layoutX="500.0" layoutY="81.0" prefHeight="31.0" prefWidth="262.0" promptText="Ram (GB)" unFocusColor="#0008ff">
+         <font>
+            <Font size="15.0" />
+         </font></JFXTextField>
+      <JFXTextField fx:id="txtStorage" focusColor="BLACK" labelFloat="true" layoutX="501.0" layoutY="146.0" prefHeight="31.0" prefWidth="262.0" promptText="Storage (GB)" unFocusColor="#0008ff">
+         <font>
+            <Font size="15.0" />
+         </font></JFXTextField>
+      <JFXTextField fx:id="txtNetwork" focusColor="BLACK" labelFloat="true" layoutX="501.0" layoutY="215.0" prefHeight="31.0" prefWidth="262.0" promptText="Network" unFocusColor="#0008ff">
+         <font>
+            <Font size="15.0" />
+         </font></JFXTextField>
+      <JFXTextField fx:id="txtWarranty" focusColor="BLACK" labelFloat="true" layoutX="841.0" layoutY="81.0" prefHeight="31.0" prefWidth="262.0" promptText="Warranty (MM)" unFocusColor="#0008ff">
+         <font>
+            <Font size="15.0" />
+         </font></JFXTextField>
+      <JFXTextField fx:id="txtQty" focusColor="BLACK" labelFloat="true" layoutX="842.0" layoutY="150.0" prefHeight="31.0" prefWidth="262.0" promptText="Qty" unFocusColor="#0008ff">
+         <font>
+            <Font size="15.0" />
+         </font></JFXTextField>
+      <JFXTextField fx:id="txtBuyingPrice" focusColor="BLACK" labelFloat="true" layoutX="842.0" layoutY="215.0" prefHeight="26.0" prefWidth="262.0" promptText="Buying Price" unFocusColor="#0008ff">
+         <font>
+            <Font size="15.0" />
+         </font></JFXTextField>
+      <JFXTextField fx:id="txtSellingPrice" focusColor="BLACK" labelFloat="true" layoutX="1176.0" layoutY="81.0" prefHeight="31.0" prefWidth="262.0" promptText="Selling Price" unFocusColor="#0008ff">
+         <font>
+            <Font size="15.0" />
+         </font></JFXTextField>
+      <JFXRadioButton fx:id="rdbPhone" layoutX="44.0" layoutY="122.0" onAction="#rdbAction" prefHeight="18.0" prefWidth="68.0" selected="true" text="Phone">
+         <toggleGroup>
+            <ToggleGroup fx:id="TGstockType" />
+         </toggleGroup>
+      </JFXRadioButton>
+      <JFXRadioButton fx:id="rdbItem" layoutX="44.0" layoutY="163.0" onAction="#rdbAction" prefHeight="18.0" prefWidth="68.0" text="Item" toggleGroup="$TGstockType" />
+      <TextField fx:id="txtId" editable="false" layoutX="31.0" layoutY="76.0" prefHeight="26.0" prefWidth="93.0" promptText="Id" />
+      <JFXButton fx:id="btnAdd" layoutX="1526.0" layoutY="85.0" onAction="#subBtnAction" prefHeight="34.0" prefWidth="94.0" style="-fx-background-color: #2471A3;" text="Add" textFill="WHITE">
+         <font>
+            <Font name="Corbel Bold" size="17.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btnUpdate" layoutX="1526.0" layoutY="151.0" onAction="#subBtnAction" prefHeight="34.0" prefWidth="94.0" style="-fx-background-color: #2471A3;" text="Update" textFill="WHITE">
+         <font>
+            <Font name="Corbel Bold" size="17.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btnDelete" layoutX="1526.0" layoutY="219.0" onAction="#subBtnAction" prefHeight="34.0" prefWidth="94.0" style="-fx-background-color: #EC7063;" text="Delete">
+         <font>
+            <Font name="Corbel" size="17.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btnReset" layoutX="1333.0" layoutY="222.0" onAction="#subBtnAction" prefHeight="34.0" prefWidth="94.0" style="-fx-background-color: #2471A3;" text="Reset" textFill="WHITE">
+         <font>
+            <Font name="Corbel" size="16.0" />
+         </font>
+      </JFXButton>
+      <Separator layoutX="19.0" layoutY="287.0" prefHeight="3.0" prefWidth="234.0" />
+      <Label layoutX="23.0" layoutY="315.0" prefHeight="26.0" prefWidth="95.0" text="New Brand">
+         <font>
+            <Font name="Arial Bold" size="17.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtNewBrand" focusColor="BLACK" labelFloat="true" layoutX="39.0" layoutY="367.0" prefHeight="31.0" prefWidth="200.0" promptText="Name" unFocusColor="#0008ff">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXTextField>
+      <JFXButton fx:id="btnNewBrand" layoutX="150.0" layoutY="428.0" onAction="#subBtnAction" prefHeight="34.0" prefWidth="94.0" style="-fx-background-color: #2471A3;" text="Add" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="14.0" />
+         </font>
+      </JFXButton>
+      <Separator layoutX="19.0" layoutY="494.0" prefHeight="3.0" prefWidth="233.0" />
+      <Label layoutX="23.0" layoutY="528.0" prefHeight="26.0" prefWidth="116.0" text="New Catagory">
+         <font>
+            <Font name="Arial Bold" size="17.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtNewCatagory" focusColor="BLACK" labelFloat="true" layoutX="43.0" layoutY="595.0" prefHeight="31.0" prefWidth="200.0" promptText="Name" unFocusColor="#0008ff">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXTextField>
+      <JFXButton fx:id="btnNewCatagory" layoutX="153.0" layoutY="656.0" onAction="#subBtnAction" prefHeight="34.0" prefWidth="94.0" style="-fx-background-color: #2471A3;" text="Add" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="14.0" />
+         </font>
+      </JFXButton>
+      <AnchorPane layoutY="1.0" prefHeight="46.0" prefWidth="1720.0" style="-fx-background-color: #2471A3;">
+         <children>
+            <JFXTextField fx:id="txtSearch" layoutX="1204.0" layoutY="8.0" onAction="#txtSearchAction" prefHeight="26.0" prefWidth="498.0" style="-fx-background-color: white;" />
+            <Label layoutX="924.0" layoutY="9.0" text="Search by id,name Stock" textFill="WHITE">
+               <font>
+                  <Font name="Yu Gothic Regular" size="21.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <HBox layoutX="2.0" layoutY="792.0" prefHeight="60.0" prefWidth="1720.0">
+         <children>
+            <Region prefHeight="60.0" prefWidth="32.0" HBox.hgrow="ALWAYS" />
+            <AnchorPane prefHeight="60.0" prefWidth="963.0">
+               <children>
+                  <Label fx:id="lblTotItem" alignment="CENTER_RIGHT" layoutX="172.0" layoutY="14.0" prefHeight="26.0" prefWidth="133.0" text="8909">
+                     <font>
+                        <Font name="Candara" size="22.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="638.0" layoutY="11.0" text="Total : ">
+                     <font>
+                        <Font name="Candara Bold" size="27.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="41.0" layoutY="15.0" text="Total Items :">
+                     <font>
+                        <Font name="Candara" size="21.0" />
+                     </font>
+                  </Label>
+                  <Line endX="106.60000610351562" layoutX="201.0" layoutY="45.0" startX="-30.000030517578125" />
+                  <Line endX="118.79998779296875" layoutX="792.0" layoutY="42.0" startX="-64.933349609375" />
+                  <Line endX="119.79998779296875" layoutX="791.0" layoutY="44.0" startX="-63.4000244140625" strokeMiterLimit="0.0" />
+                  <Label fx:id="lblTotal" alignment="CENTER_RIGHT" layoutX="745.0" layoutY="4.0" prefHeight="38.0" prefWidth="163.0" text="124368.00">
+                     <font>
+                        <Font name="Candara Bold" size="31.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="328.0" layoutY="15.0" text="Total Qty :">
+                     <font>
+                        <Font name="Candara" size="21.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblTotQty" alignment="CENTER_RIGHT" layoutX="428.0" layoutY="15.0" prefHeight="26.0" prefWidth="136.0" text="57844">
+                     <font>
+                        <Font name="Candara" size="22.0" />
+                     </font>
+                  </Label>
+                  <Line endX="124.4000244140625" layoutX="441.0" layoutY="45.0" startX="-11.800018310546875" />
+               </children>
+               <HBox.margin>
+                  <Insets right="30.0" />
+               </HBox.margin>
+            </AnchorPane>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

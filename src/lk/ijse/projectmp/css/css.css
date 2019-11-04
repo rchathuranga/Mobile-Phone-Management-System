@@ -1,0 +1,12 @@
+.cbx15{
+    -fx-font-size: 15px;
+}
+.txt{
+    -fx-text-inner-color: White;
+}
+.mainAnchor {
+    -fx-background-color: linear-gradient(to right top, #00ff7a, #24fa80, #35f486, #42ef8b, #4de98f)
+}
+.subAnchor {
+    -fx-background-color: linear-gradient(to right top, #2471a3, #1184b4, #0098c2, #00acce, #00c0d7)
+}

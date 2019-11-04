@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="873.0" prefWidth="1722.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.projectmp.controller.ViewRepairController">
+   <children>
+      <TextField fx:id="txtRepairId" layoutX="46.0" layoutY="19.0" prefHeight="32.0" prefWidth="164.0" promptText="Repair ID" />
+      <JFXTextField fx:id="txtCname" focusColor="BLACK" layoutX="27.0" layoutY="80.0" prefHeight="32.0" prefWidth="272.0" promptText="Customer Name" unFocusColor="#1900ff">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtContact" focusColor="BLACK" layoutX="346.0" layoutY="24.0" prefHeight="32.0" prefWidth="272.0" promptText="Contact" unFocusColor="#1900ff">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtNic" focusColor="BLACK" layoutX="346.0" layoutY="80.0" prefHeight="32.0" prefWidth="272.0" promptText="NIC" unFocusColor="#1900ff">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtPhone" focusColor="BLACK" layoutX="678.0" layoutY="24.0" prefHeight="32.0" prefWidth="272.0" promptText="Phone" unFocusColor="#1900ff">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtPhoneDesc" focusColor="BLACK" layoutX="678.0" layoutY="82.0" prefHeight="32.0" prefWidth="272.0" promptText="Phone Description" unFocusColor="#1900ff">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXTextField>
+      <JFXButton fx:id="btnUpdate" layoutX="499.0" layoutY="150.0" onAction="#btnUpdateAction" prefHeight="34.0" prefWidth="114.0" style="-fx-background-color: #2471A3;" text="Update" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="14.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btnDeleteRepair" layoutX="654.0" layoutY="150.0" onAction="#btnDeleteRepairAction" prefHeight="34.0" prefWidth="108.0" style="-fx-background-color: #EC7063;" text="Delete Repair" textFill="WHITE">
+         <font>
+            <Font name="Arial" size="14.0" />
+         </font>
+      </JFXButton>
+      <Separator layoutX="975.0" layoutY="17.0" orientation="VERTICAL" prefHeight="129.0" prefWidth="6.0" />
+      <Separator layoutX="814.0" layoutY="148.0" orientation="VERTICAL" prefHeight="645.0" prefWidth="5.0" />
+      <Label layoutX="1026.0" layoutY="31.0" text="No of Services">
+         <font>
+            <Font name="Arial Bold" size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="1026.0" layoutY="88.0" prefHeight="20.0" prefWidth="134.0" text="Approx. Total">
+         <font>
+            <Font name="Arial Bold" size="17.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblNoofService" alignment="CENTER_RIGHT" layoutX="1174.0" layoutY="31.0" prefHeight="20.0" prefWidth="98.0" text="00">
+         <font>
+            <Font name="Arial Bold" size="17.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblApproxiTot" alignment="CENTER_RIGHT" layoutX="1174.0" layoutY="88.0" prefHeight="20.0" prefWidth="98.0" text="00">
+         <font>
+            <Font name="Arial Bold" size="17.0" />
+         </font>
+      </Label>
+      <Line endX="100.0" layoutX="1194.0" layoutY="119.0" startX="-22.0" />
+      <Separator layoutX="1353.0" layoutY="17.0" orientation="VERTICAL" prefHeight="130.0" prefWidth="0.0" />
+      <TextField fx:id="txtServiceId" layoutX="1423.0" layoutY="28.0" prefHeight="32.0" prefWidth="256.0" promptText="Service Id">
+         <font>
+            <Font size="14.0" />
+         </font></TextField>
+      <JFXButton fx:id="btnDone" layoutX="1426.0" layoutY="82.0" onAction="#btnDoneAction" prefHeight="34.0" prefWidth="114.0" style="-fx-background-color: #2471A3;" text="Done" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="14.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btnDeleteService" layoutX="1569.0" layoutY="82.0" onAction="#btnDeleteServiceAction" prefHeight="34.0" prefWidth="108.0" style="-fx-background-color: #EC7063;" text="Delete Service" textFill="WHITE">
+         <font>
+            <Font name="Arial" size="13.0" />
+         </font>
+      </JFXButton>
+      <TableView fx:id="tblRepair" layoutX="22.0" layoutY="212.0" onMouseClicked="#tblRepairMouseAction" prefHeight="592.0" prefWidth="750.0">
+         <columns>
+            <TableColumn prefWidth="71.99991798400879" text="Repair Id" />
+            <TableColumn prefWidth="83.46663665771484" text="C Id" />
+            <TableColumn prefWidth="134.93338012695312" text="Name" />
+            <TableColumn prefWidth="135.2000732421875" text="Phone" />
+            <TableColumn prefWidth="178.40005493164062" text="Description" />
+            <TableColumn prefWidth="69.5999755859375" text="No of Repairs" />
+            <TableColumn prefWidth="78.93341064453125" text="Total" />
+         </columns>
+      </TableView>
+      <TableView fx:id="tblRepairDetail" layoutX="859.0" layoutY="175.0" onMouseClicked="#tblRepairDetailMouseAction" prefHeight="629.0" prefWidth="838.0">
+         <columns>
+            <TableColumn prefWidth="46.39996337890625" text="No" />
+            <TableColumn prefWidth="200.79998779296875" text="Service Name" />
+            <TableColumn prefWidth="120.7999267578125" text="Service Price" />
+            <TableColumn prefWidth="86.4000244140625" text="Part Id" />
+            <TableColumn prefWidth="145.60009765625" text="Part Name" />
+            <TableColumn prefWidth="92.7999267578125" text="Part Price" />
+            <TableColumn prefWidth="82.4000244140625" text="Total" />
+            <TableColumn prefWidth="61.5999755859375" text="Done" />
+         </columns>
+      </TableView>
+      <HBox fx:id="hBox" layoutX="2.0" layoutY="810.0" prefHeight="60.0" prefWidth="1720.0">
+         <children>
+            <Region prefHeight="60.0" prefWidth="387.0" HBox.hgrow="ALWAYS" />
+            <AnchorPane prefHeight="60.0" prefWidth="963.0">
+               <children>
+                  <Label layoutX="41.0" layoutY="15.0" text="Service Total : ">
+                     <font>
+                        <Font name="Candara" size="21.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblServiceTotal" alignment="CENTER_RIGHT" layoutX="172.0" layoutY="14.0" prefHeight="26.0" prefWidth="133.0" text="890.00">
+                     <font>
+                        <Font name="Candara" size="22.0" />
+                     </font>
+                  </Label>
+                  <Line endX="106.60000610351562" layoutX="201.0" layoutY="45.0" startX="-30.000030517578125" />
+                  <Label layoutX="328.0" layoutY="15.0" text="Part Total :">
+                     <font>
+                        <Font name="Candara" size="21.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblPartTotal" alignment="CENTER_RIGHT" layoutX="428.0" layoutY="15.0" prefHeight="26.0" prefWidth="136.0" text="90.00">
+                     <font>
+                        <Font name="Candara" size="22.0" />
+                     </font>
+                  </Label>
+                  <Line endX="124.4000244140625" layoutX="441.0" layoutY="45.0" startX="-11.800018310546875" />
+                  <Label layoutX="658.0" layoutY="11.0" text="Total : ">
+                     <font>
+                        <Font name="Candara Bold" size="27.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblTotal" alignment="CENTER_RIGHT" layoutX="745.0" layoutY="7.0" prefHeight="38.0" prefWidth="163.0" text="800.00">
+                     <font>
+                        <Font name="Candara Bold" size="31.0" />
+                     </font>
+                  </Label>
+                  <Line endX="119.79998779296875" layoutX="791.0" layoutY="44.0" startX="-44.5333251953125" strokeMiterLimit="0.0" />
+                  <Line endX="118.79998779296875" layoutX="792.0" layoutY="42.0" startX="-45.7999267578125" />
+               </children>
+               <HBox.margin>
+                  <Insets right="30.0" />
+               </HBox.margin>
+            </AnchorPane>
+         </children>
+      </HBox>
+      <JFXButton fx:id="btnFinish" layoutX="339.0" layoutY="150.0" onAction="#btnFinishAction" prefHeight="34.0" prefWidth="114.0" style="-fx-background-color: #2471A3;" text="Finish" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="14.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

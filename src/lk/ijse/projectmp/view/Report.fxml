@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="857.0" prefWidth="1720.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.projectmp.controller.ReportController">
+   <children>
+      <JFXButton fx:id="btnCustomer" contentDisplay="TOP" layoutX="78.0" layoutY="361.0" onAction="#repBtnAction" prefHeight="148.0" prefWidth="231.0" style="-fx-background-color: #2C3E50; -fx-background-radius: 5; -fx-border-color: #00ff66; -fx-border-radius: 5; -fx-border-width: 2;" text="Customer Details" textFill="WHITE">
+         <graphic>
+            <ImageView accessibleRole="BUTTON" fitHeight="94.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/image/Customer.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btnSales" contentDisplay="TOP" layoutX="78.0" layoutY="567.0" onAction="#repBtnAction" prefHeight="147.0" prefWidth="231.0" style="-fx-background-color: #2C3E50; -fx-background-radius: 5; -fx-border-color: #00ff66; -fx-border-radius: 5; -fx-border-width: 2;" text="Sales Invoice" textFill="WHITE">
+         <graphic>
+            <ImageView accessibleRole="BUTTON" fitHeight="88.0" fitWidth="94.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/image/ima12ge.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btnIncome" contentDisplay="TOP" layoutX="83.0" layoutY="157.0" onAction="#repBtnAction" prefHeight="136.0" prefWidth="231.0" style="-fx-background-color: #2C3E50; -fx-background-radius: 5; -fx-border-color: #00ff66; -fx-border-radius: 5; -fx-border-width: 2;" text="Income Statement" textFill="WHITE">
+         <graphic>
+            <ImageView accessibleRole="BUTTON" fitHeight="99.0" fitWidth="102.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/image/Report.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <font>
+            <Font name="System Bold" size="22.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btnPhone" contentDisplay="TOP" layoutX="382.0" layoutY="159.0" onAction="#repBtnAction" prefHeight="151.0" prefWidth="231.0" style="-fx-background-color: #2C3E50; -fx-background-radius: 5; -fx-border-color: #00ff66; -fx-border-radius: 5; -fx-border-width: 2;" text="Phone Details" textFill="WHITE">
+         <graphic>
+            <ImageView accessibleRole="BUTTON" fitHeight="90.0" fitWidth="136.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/image/ima235ge.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btnItemD" contentDisplay="TOP" layoutX="382.0" layoutY="358.0" onAction="#repBtnAction" prefHeight="155.0" prefWidth="231.0" style="-fx-background-color: #2C3E50; -fx-background-radius: 5; -fx-border-color: #00ff66; -fx-border-radius: 5; -fx-border-width: 2;" text="Item Details" textFill="WHITE">
+         <graphic>
+            <ImageView accessibleRole="BUTTON" fitHeight="98.0" fitWidth="96.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/image/ime.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btnMostSelling" contentDisplay="TOP" layoutX="382.0" layoutY="566.0" onAction="#repBtnAction" prefHeight="148.0" prefWidth="231.0" style="-fx-background-color: #2C3E50; -fx-background-radius: 5; -fx-border-color: #00ff66; -fx-border-radius: 5; -fx-border-width: 2;" text="Most Selling Items" textFill="WHITE">
+         <graphic>
+            <ImageView accessibleRole="BUTTON" fitHeight="90.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/image/imag5643e.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </JFXButton>
+      <TextArea fx:id="txtCredit" editable="false" layoutX="1097.0" layoutY="54.0" prefHeight="747.0" prefWidth="591.0" style="-fx-border-color: #1E8449; -fx-background-color: gray; -fx-border-width: 5; -fx-border-radius: 5;">
+         <font>
+            <Font name="Consolas" size="19.0" />
+         </font>
+      </TextArea>
+   </children>
+</AnchorPane>

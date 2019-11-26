@@ -7,7 +7,6 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.TextArea;
 import lk.ijse.projectmp.bo.BOFactory;
 import lk.ijse.projectmp.bo.bo.custom.CustomBO;
-import lk.ijse.projectmp.dao.DAOFactory;
 import lk.ijse.projectmp.db.DBConnection;
 import lk.ijse.projectmp.dto.CustomDTO;
 import net.sf.jasperreports.engine.JREmptyDataSource;
